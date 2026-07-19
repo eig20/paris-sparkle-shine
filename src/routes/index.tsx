@@ -97,10 +97,12 @@ function Home() {
       <header className="absolute top-0 inset-x-0 z-20 bg-gradient-to-b from-primary/70 to-transparent">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between py-6">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logo} alt="EIG Net" width={44} height={44} className="h-11 w-11 object-contain" />
-            <div className="hidden sm:block leading-tight">
-              <div className="font-display text-xl text-primary-foreground">EIG Net</div>
-              <div className="text-[10px] tracking-[0.24em] uppercase text-primary-foreground/70">Nettoyage & Rénovation</div>
+            <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
+              <img src={logo} alt="EIG Net" width={32} height={32} className="h-8 w-8 object-contain" />
+            </span>
+            <div className="leading-tight">
+              <div className="font-display text-lg text-primary-foreground">EIG Net</div>
+              <div className="text-[9px] tracking-[0.2em] uppercase text-primary-foreground/70">Nettoyage & Rénovation</div>
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/85">
@@ -363,7 +365,9 @@ function Home() {
       <footer className="bg-primary text-primary-foreground/80">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="EIG Net" width={36} height={36} className="h-9 w-9 object-contain" />
+            <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white">
+              <img src={logo} alt="EIG Net" width={32} height={32} className="h-8 w-8 object-contain" />
+            </span>
             <div className="text-sm">
               <div className="font-display text-lg text-primary-foreground">EIG Net</div>
               <div className="text-[10px] tracking-[0.22em] uppercase text-primary-foreground/60">Au service de la copropriété depuis 2005</div>
