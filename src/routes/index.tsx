@@ -118,7 +118,7 @@ function Home() {
       {/* HERO */}
       <section id="top" className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <img src={hero} alt="Immeuble haussmannien parisien entretenu par EIG Net" className="h-full w-full object-cover" />
+          <img src={hero} alt="Immeuble haussmannien parisien entretenu par EIG Net" className="h-full w-full object-cover" fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-[linear-gradient(115deg,oklch(0.20_0.05_255/0.92)_0%,oklch(0.25_0.06_250/0.78)_45%,oklch(0.30_0.06_240/0.35)_100%)]" />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-10 pt-40 pb-28 md:pt-52 md:pb-40">
@@ -159,7 +159,7 @@ function Home() {
       <section id="about" className="py-24 md:py-32 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5">
-            <img src={craft} alt="Le souci du détail par EIG Net" width={600} height={704} loading="lazy" className="rounded-sm shadow-elegant w-full object-cover aspect-[5/6]" />
+            <img src={craft} alt="Le souci du détail par EIG Net" width={600} height={704} loading="lazy" decoding="async" className="rounded-sm shadow-elegant w-full object-cover aspect-[5/6]" />
           </div>
           <div className="md:col-span-7 md:pl-8">
             <p className="eyebrow">Qui sommes-nous</p>
