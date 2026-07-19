@@ -37,7 +37,7 @@ const services: Service[] = [
     "Travaux préparatoires, enduits",
     "Toile de verre, papiers peints",
     "Peintures intérieures & extérieures",
-    "Vernis, lasures, antirouille",
+    "Vernis, lasures, antirouille, passivation",
   ]},
   { icon: Wrench, title: "Plomberie", items: [
     "Remplacement ballon, chaudière",
@@ -53,15 +53,17 @@ const services: Service[] = [
   ]},
   { icon: Hammer, title: "Maçonnerie", items: [
     "Murs, murets, cloisons, dalles béton",
-    "Reprise de parties dégradées",
+    "Reprise de parties dégradées (dalles, parking, nids de poule)",
     "Chappe, ragréage et dalles",
+    "Mise à niveau de pavage",
     "Ventilations anti-humidité",
   ]},
   { icon: Grid3x3, title: "Carrelage & Revêtement", items: [
-    "Carrelage, pierre, marbre, faïence",
+    "Carrelage, pierre, marbre, faïence et mosaïque",
     "Traitement d'étanchéité",
     "Parquet massif, stratifié, contrecollé",
-    "Vitrification & réparation",
+    "Vitrification, mise en huile & vernis en teinte",
+    "Réparation & rénovation",
   ]},
   { icon: DoorOpen, title: "Menuiserie", items: [
     "Portes, fenêtres, volets (bois, PVC, alu)",
@@ -71,8 +73,9 @@ const services: Service[] = [
   { icon: KeyRound, title: "Serrurerie", items: [
     "Ouverture de porte, ferme-porte",
     "Remplacement & réparation serrures",
+    "Installation et réglage de bandeau ventouse",
     "Garde-corps, mains courantes",
-    "Blindage, sécurisation logements",
+    "Blindage, sécurisation logements (cornière antipince, plat de recouvrement)",
   ]},
   { icon: Package, title: "Désencombrement", items: [
     "Appartements, caves, parties communes",
