@@ -9,9 +9,10 @@ import galVitres from "@/assets/gallery-vitres.jpg";
 import galParquet from "@/assets/gallery-parquet.jpg";
 import galFacade from "@/assets/gallery-facade.jpg";
 
+import { useState } from "react";
 import {
   Sparkles, PaintRoller, Wrench, Zap, Hammer, Grid3x3,
-  DoorOpen, KeyRound, Package, UserCog, Phone, Mail, MapPin, Clock, ArrowUpRight,
+  DoorOpen, KeyRound, Package, UserCog, Phone, Mail, MapPin, Clock, ArrowUpRight, Menu, X,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -91,12 +92,21 @@ const services: Service[] = [
 ];
 
 function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#about", label: "La maison" },
+    { href: "#services", label: "Prestations" },
+    { href: "#clients", label: "Clients" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAV */}
       <header className="absolute top-0 inset-x-0 z-20 bg-gradient-to-b from-primary/70 to-transparent">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between py-6">
-          <a href="#top" className="flex items-center gap-3">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 flex items-center justify-between py-5">
+          <a href="#top" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
             <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-sm">
               <img src={logo} alt="EIG Net" width={32} height={32} className="h-8 w-8 object-contain" />
             </span>
@@ -106,15 +116,42 @@ function Home() {
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/85">
-            <a href="#about" className="hover:text-accent transition-colors">La maison</a>
-            <a href="#services" className="hover:text-accent transition-colors">Prestations</a>
-            <a href="#clients" className="hover:text-accent transition-colors">Clients</a>
-            <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+            {navLinks.map(({ href, label }) => (
+              <a key={href} href={href} className="hover:text-accent transition-colors">{label}</a>
+            ))}
           </nav>
-          <a href="tel:+33143674636" className="hidden sm:inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-4 py-2 text-sm text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors">
-            <Phone className="h-4 w-4" /> 01 43 67 46 36
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="tel:+33143674636" className="hidden sm:inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 px-4 py-2 text-sm text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors">
+              <Phone className="h-4 w-4" /> 01 43 67 46 36
+            </a>
+            <button
+              className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-full border border-primary-foreground/30 text-primary-foreground"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Menu"
+            >
+              {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-primary/95 backdrop-blur-sm px-6 pb-6 pt-2 flex flex-col gap-4">
+            {navLinks.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className="text-primary-foreground/90 text-base py-2 border-b border-primary-foreground/10 hover:text-accent transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+            <a href="tel:+33143674636" className="mt-2 inline-flex items-center gap-2 text-accent text-sm font-medium">
+              <Phone className="h-4 w-4" /> 01 43 67 46 36
+            </a>
+          </div>
+        )}
       </header>
 
       {/* HERO */}
@@ -329,7 +366,7 @@ function Home() {
                 { icon: MapPin, label: "Siège social", value: "19 rue des Balkans, 75020 Paris" },
                 { icon: Phone, label: "Téléphone", value: "01 43 67 46 36", href: "tel:+33143674636" },
                 { icon: Phone, label: "Portables", value: "06 09 31 61 58  ·  06 34 11 97 31" },
-                { icon: Mail, label: "E-mail", value: "eignet@live.fr", href: "mailto:eignet@live.fr" },
+                { icon: Mail, label: "E-mail", value: "contact@eig-net.fr", href: "mailto:contact@eig-net.fr" },
                 { icon: Clock, label: "Horaires", value: "Lun — Ven, 08:00 — 18:00" },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex gap-4 items-start">
