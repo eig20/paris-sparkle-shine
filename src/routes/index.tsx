@@ -227,7 +227,72 @@ function Home() {
         </div>
       </section>
 
+      {/* GALLERY */}
+      <section id="realisations" className="py-24 md:py-32 bg-cream">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="eyebrow">Nos réalisations</p>
+              <h2 className="mt-4 font-display text-4xl md:text-5xl text-primary max-w-2xl leading-tight">
+                Le Paris que nous entretenons.
+              </h2>
+            </div>
+            <p className="md:max-w-sm text-muted-foreground">
+              Immeubles haussmanniens, boutiques, appartements de standing — quelques images de nos interventions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 md:h-[720px]">
+            <figure className="relative overflow-hidden rounded-sm group col-span-2 row-span-2">
+              <img src={galNettoyage} alt="Nettoyage d'un hall parisien" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent">
+                <p className="eyebrow text-accent">Nettoyage</p>
+                <p className="mt-1 font-display text-2xl text-primary-foreground">Halls & parties communes</p>
+              </figcaption>
+            </figure>
+            <figure className="relative overflow-hidden rounded-sm group">
+              <img src={galVitres} alt="Lavage de vitres avec vue sur Paris" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-primary/85 to-transparent">
+                <p className="font-display text-lg text-primary-foreground">Vitrerie</p>
+              </figcaption>
+            </figure>
+            <figure className="relative overflow-hidden rounded-sm group">
+              <img src={galPeinture} alt="Travaux de peinture sur moulures" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-primary/85 to-transparent">
+                <p className="font-display text-lg text-primary-foreground">Peinture</p>
+              </figcaption>
+            </figure>
+            <figure className="relative overflow-hidden rounded-sm group">
+              <img src={galParquet} alt="Parquet rénové en point de Hongrie" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-primary/85 to-transparent">
+                <p className="font-display text-lg text-primary-foreground">Parquet & revêtement</p>
+              </figcaption>
+            </figure>
+            <figure className="relative overflow-hidden rounded-sm group">
+              <img src={galPlomberie} alt="Salle de bains rénovée" loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+              <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-primary/85 to-transparent">
+                <p className="font-display text-lg text-primary-foreground">Plomberie</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-6 items-center border-t border-border pt-10">
+            <img src={galFacade} alt="Façade parisienne entretenue par EIG" loading="lazy" className="md:col-span-1 aspect-[4/5] object-cover rounded-sm" />
+            <div className="md:col-span-2 md:pl-6">
+              <p className="eyebrow">Un seul interlocuteur</p>
+              <h3 className="mt-3 font-display text-3xl md:text-4xl text-primary leading-tight">
+                De la porte cochère au dernier étage.
+              </h3>
+              <p className="mt-4 text-muted-foreground max-w-xl">
+                Nettoyage quotidien, remise en état, petits travaux, gros œuvre : EIG orchestre tous les corps de métier pour que votre immeuble conserve son éclat, saison après saison.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CLIENTS / QUOTE */}
+
       <section id="clients" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />
         <div className="mx-auto max-w-4xl px-6 lg:px-10 text-center relative">
