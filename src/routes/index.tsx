@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/eig-logo.png";
 import hero from "@/assets/hero-parisian.jpg";
 import craft from "@/assets/craft-detail.jpg";
+import galNettoyage from "@/assets/gallery-nettoyage.jpg";
+import galPeinture from "@/assets/gallery-peinture.jpg";
+import galPlomberie from "@/assets/gallery-plomberie.jpg";
+import galVitres from "@/assets/gallery-vitres.jpg";
+import galParquet from "@/assets/gallery-parquet.jpg";
+import galFacade from "@/assets/gallery-facade.jpg";
+
 import {
   Sparkles, PaintRoller, Wrench, Zap, Hammer, Grid3x3,
   DoorOpen, KeyRound, Package, UserCog, Phone, Mail, MapPin, Clock, ArrowUpRight,
